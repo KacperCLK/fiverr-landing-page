@@ -1,0 +1,32 @@
+.contact {
+    height: max(80vh, 70rem);
+    
+    @media only screen and (max-width: $bp-small) {
+        margin-bottom: 10vh;
+    } 
+
+    @media only screen and (max-width: $bp-smallest) {
+        height: max(55vh, 45rem);
+    } 
+
+    &__envelope{
+        font-size: 40rem;
+
+        @media only screen and (max-width: $bp-large) {
+            font-size: 25rem;
+        } 
+        
+        @media only screen and (max-width: $bp-smallest) {
+            display: none;
+        } 
+    }
+
+    &__title {
+        display: none;
+
+        @media only screen and (max-width: $bp-smallest) {
+            display: block;
+            margin-bottom: 3rem;
+        } 
+    }
+}

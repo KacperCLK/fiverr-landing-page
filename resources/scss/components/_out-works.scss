@@ -1,0 +1,97 @@
+.our-works {
+    height: 90vh;
+
+    @media only screen and (max-width: $bp-small) {
+        height: 80vh;
+    }
+
+    .swiper{
+        &-container {
+            position: relative;
+            width: 55rem;
+            height: 60rem;
+            padding: 0 5rem;
+            
+            @media only screen and (max-width: $bp-medium) {
+                height: 70vh;
+                width: 70vw;
+            }  
+
+            @media only screen and (max-width: $bp-small) {
+                height: 60vh;
+                width: 86vw;
+            } 
+
+            @media only screen and (max-width: $bp-smallest) {
+                width: 95vw;
+            } 
+        }
+        
+        &-slide {
+            background: #ddd;
+            color: black;
+            border-radius: 20px;
+            box-shadow: 0px 0px 15px -4px rgba($color-main-1, .5);
+            cursor: pointer;
+        }
+
+        &-button-next,
+        &-button-prev {
+            color: $color-main-2;
+        }
+
+        &-button-next {
+            transform: translateX(5rem);
+
+            @media only screen and (max-width: $bp-small) {
+                transform: translateX(2rem);
+            } 
+            @media only screen and (max-width: $bp-small) {
+                transform: translateX(1rem);
+            } 
+        }
+    
+        &-button-prev {
+            transform: translateX(-5rem);
+
+            @media only screen and (max-width: $bp-small) {
+                transform: translateX(-2rem);
+            } 
+            @media only screen and (max-width: $bp-small) {
+                transform: translateX(-1rem);
+            } 
+        }
+
+        &-pagination {
+            transform: translateY(4rem);
+
+            &-bullet {
+                background: $color-main-1;
+
+                &-active {
+                    background: $color-main-2;
+                }
+            }
+        }
+    }
+
+    &__iframe-container {
+        position: relative;
+        height: 100%;
+    }
+
+    &__iframe {
+        height: 100%;
+        width: 100%;
+        pointer-events: none
+    }
+
+    &__iframe-btn {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        z-index: 1000;
+    }
+}

@@ -1,0 +1,182 @@
+.price-list {
+    height: fit-content;
+
+    .card__right {
+        @media only screen and (max-width: $bp-large) {
+            grid-row: 1;
+            justify-content: center;
+            margin-bottom: 2rem;
+            height: fit-content;
+        } 
+    }
+    .card__left {
+        @media only screen and (max-width: $bp-large) {
+            height: 100%;
+        } 
+    }
+
+
+    &__table {
+        display: grid;
+        grid-template-rows: 8rem 1fr;
+        width: 50rem;
+        height: max(70vh, 65rem);
+        
+        overflow: hidden;
+        color: $color-black;
+        background-color: $color-main-1;
+
+        box-shadow: 0px 0px 15px 2px rgba($color-main-1, .5);
+        border-radius: 20px;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: min(100%, 50rem);
+        }
+
+        @media only screen and (max-width: $bp-small) {        
+            border-radius: 0;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            height: max(40vh, 35rem);  
+            grid-template-rows: 5rem 1fr;
+        }
+
+        &__nav {
+            display: grid;
+            grid-template-columns: repeat(3, 33.333%);
+            align-items: center;
+            border-bottom: 1px solid $color-grey;
+
+            
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: $font-size-s;
+            }
+                
+            &__opt {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                
+                color: $color-grey;    
+                background-color: $color-grey-very-light;
+                border-bottom: 3px solid transparent;
+                cursor: pointer;
+
+                transition: all .2s ease;
+                
+                &:not(:last-child){
+                    border-right: 1px solid $color-grey;
+                }
+                
+                &.active {
+                    border-bottom: 3px solid $color-grey;
+                    background-color: $color-white;
+                }
+            }
+
+        }
+
+        &__content {
+            &__opt {
+                display: none;
+                height: 90%;
+                margin: 5% 0;
+
+                &.active {
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    grid-template-rows: 15% 15% 10% repeat(5, 8%) 20%;
+
+                    @media only screen and (max-width: $bp-small) {
+                        font-size: $font-size-s;
+                    }
+
+                    @media only screen and (max-width: $bp-smallest) {
+                        margin: 2% 0;
+                        height: 96%;
+                        font-size: $font-size-xs;
+                        grid-template-rows: 12.5% 20% 12.5% repeat(3, 12.5%) 20%;
+                    }
+                }
+            }
+
+            &__bundle,
+            &__description,
+            &__button {
+                grid-column: 1/3;
+            }
+            
+            &__bundle {
+                @media only screen and (max-width: $bp-smallest) {
+                    grid-column: auto;
+                }
+            }
+
+            &__title, 
+            &__price, 
+            &__delivery-time, 
+            &__number-of-revisions, 
+            &__button,
+            &__description, 
+            &__bundle {
+                display: flex;
+                align-items: center;
+            }
+
+            &__title, 
+            &__price, 
+            &__delivery-time, 
+            &__number-of-revisions, 
+            &__button,
+            &__description {
+                justify-content: center;
+                text-align: center;
+            }
+
+            &__delivery-time, 
+            &__number-of-revisions {
+                color: $color-grey;
+                gap: 1rem;
+            }
+
+            &__description, 
+            &__bundle {
+                color: $color-grey-light;
+                padding: 0 2rem;
+                
+                @media only screen and (max-width: $bp-smallest) {
+                    padding: 0 1rem;
+                }
+            }
+
+            &__bundle {
+                gap: 1rem;
+
+                &.active {
+                    color: $color-main-2-dark;
+                }
+            }
+
+            &__button {
+                display: flex;
+                width: 80%;
+                height: 60%;
+                
+                margin: auto;
+
+                border-radius: 1000px;
+                overflow: hidden;
+
+                @media only screen and (max-width: $bp-smallest) {
+                    width: 50%;
+                }
+
+                button {
+                    gap: 1rem;
+                }
+            }
+        }
+    }
+}

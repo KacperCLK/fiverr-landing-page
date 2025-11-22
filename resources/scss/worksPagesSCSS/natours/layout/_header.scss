@@ -1,0 +1,35 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right, 
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)),
+        url(/public/storage/photos/works-page/natours/nat-5.jpg);
+    background-size: cover; /* Zdjęcie zawsze będzie się dopasowywało do elementu w którym się znajduje. */
+    background-position: top;  
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+    @include respond (phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    &__logo-box{
+        position: absolute;
+        top: 40px;
+        left: 40px;   
+    }
+
+    &__logo{
+        height: 35px;
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}

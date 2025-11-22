@@ -1,0 +1,104 @@
+.form {
+    position: relative;
+
+    display: grid;
+    grid-template-rows: 12% 12% 37% 15%;
+    gap: 8%;
+    
+    height: 70%;
+    width: 50rem;
+
+    @media only screen and (max-width: $bp-large) {
+        height: 100%;
+        width: 60%;
+    } 
+
+    @media only screen and (max-width: $bp-medium) {
+        width: min(80%, 50rem);
+    } 
+
+    @media only screen and (max-width: $bp-smallest) {
+        width: 100%;
+    }
+    
+    &__group{
+        position: relative;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+
+        font-size: $font-size-xs;
+        background: $color-white; 
+        
+        outline: none; 
+        box-shadow: 0px 0px 15px 0px rgba($color-main-1, .5);
+        border: none; 
+        border: 2px solid transparent;
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding: 1.5rem;
+        } 
+
+        &:focus {
+            box-shadow: 0px 0px 15px 5px rgba($color-main-2, 1);
+        }
+
+        &.is-invalid {
+            box-shadow: 0px 0px 15px 5px rgba($color-error, .5);
+        }
+    }
+
+    input,
+    button {
+        border-radius: 1000px;
+
+        @media only screen and (max-width: $bp-smallest) {        
+            border-radius: 10px;
+        } 
+    }
+    
+    textarea {
+        border-radius: 20px;
+        resize: none; 
+        
+        @media only screen and (max-width: $bp-smallest) {        
+            border-radius: 10px;
+        } 
+    }
+
+    .error {
+        position: absolute;
+        bottom: -2.5rem;
+        width: 100%;
+        
+        margin-left: 2rem;
+
+        color: $color-error;
+        font-size: $font-size-s;
+        
+        @media only screen and (max-width: $bp-large) {
+            font-size: $font-size-xs;
+        } 
+    }
+
+    .alert-success {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        
+        bottom: -5rem;
+
+        font-size: $font-size-s-m;
+        color: $color-success;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: $font-size-s;
+        } 
+    }
+}

@@ -1,0 +1,25 @@
+.link {
+    &--1 {
+        text-decoration: none;
+        color: $color-main-2;
+
+        transition: all .2s ease;
+
+        &:hover {
+            color: $color-main-2-dark ;
+        }
+    }
+
+    &--header {
+        font-size: inherit;
+        text-decoration: none;
+        color: inherit;
+        
+        transition: all .2s ease;
+        text-align: center;
+
+        &:hover {
+            color: $color-main-2-dark ;
+        }
+    }
+}

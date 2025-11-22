@@ -1,0 +1,59 @@
+.button {
+    &--main {
+        display: flex;
+        height: 100%;
+        width: 100%;
+
+        justify-content: center;
+        align-items: center;
+        
+        font-size: $font-size-s-m;
+        font-weight: 600;
+        text-transform: uppercase;
+        
+        color: $color-main-1;
+        background: linear-gradient(45deg, $color-main-2, $color-main-3);
+        
+        cursor: pointer;
+        border: none;
+
+        transition: all .2s ease;
+                
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: $font-size-xs;
+        } 
+
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+
+    &--iframe {
+        padding: 1.5rem 8rem;
+        
+        color: $color-main-1;
+        font-weight: 600;
+        font-size: $font-size-s-m;
+        text-transform: uppercase;
+        
+        background: linear-gradient(45deg, $color-main-2, $color-main-3);
+        border-radius: 1000px;
+        border: none;
+
+        transition: all .2s ease;
+        
+        &:hover{
+            background: linear-gradient(45deg, $color-main-2, $color-main-2);
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 1rem 6rem;
+            font-size: $font-size-s;
+        } 
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding: 1rem 3rem;
+            font-size: $font-size-xs;
+        } 
+    }
+}

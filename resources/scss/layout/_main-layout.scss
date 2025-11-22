@@ -1,0 +1,84 @@
+.main-layout {
+    background-color: $color-main-bg;
+    color: $color-white;
+    font-size: $font-size-s-m;
+}
+
+.card {
+    display: flex;
+    width: 100vw;
+    padding: 10vh 0;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        height: max(fit-content, 70rem);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 10vh 0 0 0;
+    }
+
+    &__theme {
+        width: 70vw;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 95vw;
+        }
+        &--1 {
+            display: grid;
+            grid-template-columns: 35vw 35vw;
+            
+            @media only screen and (max-width: $bp-large) {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr;
+                gap: 3rem;
+            }
+        }
+    }
+
+    &__left, &__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__solo {
+        width: 100%;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-out, transform .6s ease-out;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    opacity: 0;
+    transition: opacity 2s ease-out;
+
+    .card__left {
+        transform: translateX(-100px);
+        transition: all 1s ease-out;
+    }
+    .card__right {
+        transform: translateX(100px);
+        transition: all 1s ease-out;
+    }
+
+    &.visible {
+        opacity: 1;
+
+        .card__left {
+            transform: translateX(0);
+        }
+        .card__right {
+            transform: translateX(0);
+        }
+    }
+}

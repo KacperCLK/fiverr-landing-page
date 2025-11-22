@@ -1,0 +1,25 @@
+// Styles
+.style {
+    &--italic {
+        font-style: italic;
+    }
+
+    &--uppercase {
+        text-transform: uppercase;
+    }
+}
+
+// Colors
+.color {
+    &--main-1{
+        color: $color-main-1;
+    }
+
+    &--main-2{
+        color: $color-main-2;
+    }
+
+    &--main-3{
+        color: $color-main-3;
+    }
+}

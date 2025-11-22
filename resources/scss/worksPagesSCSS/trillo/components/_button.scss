@@ -1,0 +1,101 @@
+.btn-inline {
+    display: inline-block;
+    padding-bottom: 2px;
+
+    font-size: inherit;
+    border: none;
+    color: var(--color-primary);
+    background-color: transparent;
+    border-bottom: 1px solid currentColor;
+    cursor: pointer;
+
+    transition: all .2s;
+
+    & span {
+        margin-left: 3px;
+        transition: margin-left .2s;
+    }
+
+    &:hover {
+        color: var(--color-grey-dark-1);
+
+        & span {
+            margin-left: 8px;
+        }
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+}
+
+.btn {
+    position: relative;
+    
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    
+    border-radius: 100px;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+
+    color: white;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    
+    & > * {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+
+        transition: all .2s;
+    }
+
+    &__visible {
+        padding: 2rem 7.5rem;
+    }
+
+    &__invisible{
+        position: absolute;
+        left: 0;
+        top: -100%;
+
+        
+        padding: 2rem 0;
+    }
+
+    &:hover {
+        background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+    }
+
+    &:hover &__visible {
+        transform: translateY(100%);
+    }
+
+    &:hover &__invisible {
+            top: 0;
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+}
+
+.cta {
+    padding: 3.5rem 0;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem 0;
+    }
+
+    &__book-now {
+        margin: 2.5rem 0;
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+}

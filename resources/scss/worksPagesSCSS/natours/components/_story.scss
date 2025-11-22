@@ -1,0 +1,75 @@
+.story {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: rgba($color-white, .6);
+    border-radius: 3px;
+    padding: 6rem 9rem;
+    font-size: $default-font-size;
+    transform: skewX(-12deg);
+    margin-bottom: 5rem;
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem 7rem;
+    }
+    @include respond(phone) {
+        transform: skewX(0);
+    }
+
+    & > * {
+        transform: skewX(12deg);
+    }
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        position: relative;
+
+        transform: translateX(-3rem) skewX(12deg);
+
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);
+            width: 10rem;
+            height: 10rem;
+        }
+        
+    }
+
+    &__image {
+        height: 100%;
+        transform: translateX(-4rem) scale(1.4);
+        transition: all .5s ease;
+    }
+
+    &__caption {
+        @include center-horizontal-and-vertical;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s ease;
+        backface-visibility: hidden;
+    }
+
+    &__text {
+        @include respond(phone) {
+            transform: skewX(0);
+        }
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    
+    &:hover &__image {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(80%);
+    }
+}

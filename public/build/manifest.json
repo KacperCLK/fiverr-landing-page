@@ -1,0 +1,63 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-l0sNRNKZ.js",
+    "name": "app",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/worksPagesCSS/app.css": {
+    "file": "assets/app-DP2rzg_V.js",
+    "name": "app",
+    "src": "resources/css/worksPagesCSS/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-BW8FeGlZ.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-BZ_WhpHG.css"
+    ]
+  },
+  "resources/scss/app.scss": {
+    "file": "assets/app-DyJJM2eY.css",
+    "src": "resources/scss/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/worksPagesSCSS/natours/app.scss": {
+    "file": "assets/app-Ds6-Gb5g.css",
+    "src": "resources/scss/worksPagesSCSS/natours/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/worksPagesSCSS/nexter/app.scss": {
+    "file": "assets/app-Al8W_TRd.css",
+    "src": "resources/scss/worksPagesSCSS/nexter/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/worksPagesSCSS/trillo/app.scss": {
+    "file": "assets/app-yv8ZP8Pa.css",
+    "src": "resources/scss/worksPagesSCSS/trillo/app.scss",
+    "isEntry": true
+  },
+  "storage/app/public/photos/works-page/natours/nat-10.jpg": {
+    "file": "assets/nat-10-BdCmwXt_.jpg",
+    "src": "storage/app/public/photos/works-page/natours/nat-10.jpg"
+  },
+  "storage/app/public/photos/works-page/natours/nat-4.jpg": {
+    "file": "assets/nat-4-Bw1Lr8fy.jpg",
+    "src": "storage/app/public/photos/works-page/natours/nat-4.jpg"
+  },
+  "storage/app/public/photos/works-page/natours/nat-5.jpg": {
+    "file": "assets/nat-5-ChjGwgv6.jpg",
+    "src": "storage/app/public/photos/works-page/natours/nat-5.jpg"
+  },
+  "storage/app/public/photos/works-page/natours/nat-6.jpg": {
+    "file": "assets/nat-6-BQ_1IDva.jpg",
+    "src": "storage/app/public/photos/works-page/natours/nat-6.jpg"
+  },
+  "storage/app/public/photos/works-page/natours/nat-7.jpg": {
+    "file": "assets/nat-7-DwY2S5C1.jpg",
+    "src": "storage/app/public/photos/works-page/natours/nat-7.jpg"
+  }
+}
